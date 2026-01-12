@@ -60,6 +60,14 @@ ap_skeleton_locations = {
     # But just know that it's mostly about organization
     # Place locations together based on where they are in the game and what is needed to get there
 
+    #Evergaol Bosses
+
+    "A Fake Location Name": LocData(20050100),
+
+    #Field Bosses
+
+    #Location Bosses
+
     #Night 1 Bosses
 
     "A Fake Location Name": LocData(20050100, "Night 1"),
@@ -78,19 +86,89 @@ ap_skeleton_locations = {
 
     #Nightlords
 
+    "Gladius, Beast of Night": LocData(20050100, "Night 3"),
+    "Adel, Baron of Night": LocData(20050100, "Night 3"),
+    "Gnoster, Wisdom of Night": LocData(20050100, "Night 3"),
+    "Maris, Fathom of Night": LocData(20050100, "Night 3"),
+    "Libra, Creature of Night": LocData(20050100, "Night 3"),
+    "Fulghor, Champion of Nightglow": LocData(20050100, "Night 3"),
+    "Caligo, Miasma of Night": LocData(20050100, "Night 3"),
+    "Heolstor, the Nightlord": LocData(20050100, "Night 3"),
 
+    #Shifting Earth Rewards (for later?)
+
+    
 
     #Small Jar Bazaar
+    
+    "Wylder's Goblet": LocData(20050100, "Roundtable Hold"),
+    "Spirit Shelter Grail": LocData(20050100, "Roundtable Hold"),
+    "Sacred Erdtree Grail": LocData(20050100, "Roundtable Hold"),
+    "Revenant's Goblet": LocData(20050100, "Roundtable Hold"),
+    "Recluse's Goblet": LocData(20050100, "Roundtable Hold"),
+    "Raider's Goblet": LocData(20050100, "Roundtable Hold"),
+    "Ironeye's Goblet": LocData(20050100, "Roundtable Hold"),
+    "Guardian's Goblet": LocData(20050100, "Roundtable Hold"),
+    "Giant's Cradle Grail": LocData(20050100, "Roundtable Hold"),
+    "Executor's Goblet": LocData(20050100, "Roundtable Hold"),
+    "Duchess' Goblet": LocData(20050100, "Roundtable Hold"),
+
+    "Scenic Flatstone": LocData(20050100, "Roundtable Hold"),
+    "Polished Tranquil Scene": LocData(20050100, "Roundtable Hold"),
+    "Polished Luminous Scene": LocData(20050100, "Roundtable Hold"),
+    "Polished Drizzly Scene": LocData(20050100, "Roundtable Hold"),
+    "Polished Burning Scene": LocData(20050100, "Roundtable Hold"),
+
+    "Grand Tranquil Scene": LocData(20050100, "Roundtable Hold"),
+    "Grand Luminous Scene": LocData(20050100, "Roundtable Hold"),
+    "Grand Drizzly Scene": LocData(20050100, "Roundtable Hold"),
+    "Grand Burning Scene": LocData(20050100, "Roundtable Hold"),
+
+    "Delicate Tranquil Scene": LocData(20050100, "Roundtable Hold"),
+    "Delicate Luminous Scene": LocData(20050100, "Roundtable Hold"),
+    "Delicate Drizzly Scene": LocData(20050100, "Roundtable Hold"),
+    "Delicate Burning Scene": LocData(20050100, "Roundtable Hold"),
+
+    "Deep Scenic Flatstone": LocData(20050100, "Roundtable Hold"),
+    "Besmirched Frame": LocData(20050100, "Roundtable Hold"),
+
+    "Prattling Pate \"You're beautiful\"": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"Wonderful\"": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"Thank You\"": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"Please Help\"": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"My beloved\"": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"Let's get to it\"": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"Hello\"": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"Apologies\"": LocData(20050100, "Roundtable Hold"),
+
+    "Gesture: What Do You Want?": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Warm Welcome": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Strength!": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Spread Out": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Sitting Sideways": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Reverential Bow": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Rest": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Rapture": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Prayer": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Polite Bow": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Patches' Crouch": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Outer Order": LocData(20050100, "Roundtable Hold"),
+    "Gesture: My Lord": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Inner Order": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Hoslow's Oath": LocData(20050100, "Roundtable Hold"),
+    "Gesture: Heartening Cry": LocData(20050100, "Roundtable Hold"),
+
+    #Collector Signboard
 
 }
 
 extra_locations = {
-    "ml7's house": LocData(20050102, "Sibiu"),
+  
 }
 
 # Like in Items.py, breaking up the different locations to help with organization and if something special needs to happen to them
 event_locations = {
-    "Beat Final Boss": LocData(20050110, "Big Hole in the Floor")
+
 }
 
 # Also like in Items.py, this collects all the dictionaries together

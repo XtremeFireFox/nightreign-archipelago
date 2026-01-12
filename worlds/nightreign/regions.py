@@ -18,9 +18,9 @@ def create_regions(world: "APSkeletonWorld"):
     # You can technically name your connections whatever you want as well
     # You'll use those connection names in Rules.py
     roundtable_hold = create_region(world, "Roundtable Hold")
-    night_1 = create_region_and_connect(world, "night_1", "Menu -> Night 1", roundtable_hold)
-    night_2 = create_region_and_connect(world, "night_2", "Night 1 -> Night 2", night_1)
-    night_3 = create_region_and_connect(world, "night_3", "Night 2 -> Night 3", night_2)
+    night_1 = create_region_and_connect(world, "Night 1", "Menu -> Night 1", roundtable_hold)
+    night_2 = create_region_and_connect(world, "Night 2", "Night 1 -> Night 2", night_1)
+    night_3 = create_region_and_connect(world, "Night 3", "Night 2 -> Night 3", night_2)
 
 def create_region(world: "APSkeletonWorld", name: str) -> Region:
     reg = Region(name, world.player, world.multiworld)

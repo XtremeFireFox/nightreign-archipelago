@@ -115,7 +115,7 @@ def create_junk_items(world: "APSkeletonWorld", count: int) -> List[Item]:
 # Watch out for overlap with your item codes
 # These are just random numbers dont trust them PLEASE
 # I've seen some games that dynamically add item codes such as DOOM as well
-ap_skeleton_items = {
+ap_memory_fragments = {
     #Memory Fragments
     "Memory Fragment - Wylder": ItemData(20050000, ItemClassification.progression, 9),
     "Memory Fragment - Ironeye": ItemData(20050001, ItemClassification.progression, 8),
@@ -128,6 +128,29 @@ ap_skeleton_items = {
     
     # Victory is added here since in this organization it needs to be in the default item pool
     #"Victory": ItemData(20050007, ItemClassification.progression)
+}
+
+ap_shifting_earths = {
+    "Crater Unlock": ItemData(20050008, ItemClassification.progression),
+    "Mountaintop Unlock": ItemData(20050000, ItemClassification.progression),
+    "Rotted Woods Unlock": ItemData(20050000, ItemClassification.progression),
+    "Noklateo, the Shrouded City Unlock": ItemData(20050000, ItemClassification.progression),
+}
+
+ap_nights = {
+    "Night 2 Unlock": ItemData(20050000, ItemClassification.progression),
+    "Night 3 Unlock": ItemData(20050000, ItemClassification.progression),
+}
+
+ap_nightlords = {
+    "Gladius, Beast of Night": ItemData(20050008, ItemClassification.progression),
+    "Adel, Baron of Night": ItemData(20050000, ItemClassification.progression),
+    "Gnoster, Wisdom of Night": ItemData(20050000, ItemClassification.progression),
+    "Maris, Fathom of Night": ItemData(20050000, ItemClassification.progression),
+    "Libra, Creature of Night": ItemData(20050000, ItemClassification.progression),
+    "Fulghor, Champion of Nightglow": ItemData(20050000, ItemClassification.progression),
+    "Caligo, Miasma of Night": ItemData(20050000, ItemClassification.progression),
+    "Heolstor, the Nightlord": ItemData(20050000, ItemClassification.progression),
 }
 
 # I like to split up the items so that its easier to look at and since sometimes you only need to look at one specific type of list
@@ -146,7 +169,7 @@ ap_characters = {
 # In the way that I made items, I added a way to specify how many of an item should exist
 # That's why junk has a 0 since how many are created is in the create_junk_items
 # There is a better way of doing this but this is my jank
-junk_items = {
+'''junk_items = {
     # Junk
     "An Old Gamecube": ItemData(20050011, ItemClassification.filler, 0),
     "Coughing Baby": ItemData(20050012, ItemClassification.filler, 0),
@@ -154,7 +177,7 @@ junk_items = {
     # Traps
     "Forcefem Trap": ItemData(20050013, ItemClassification.trap, 0),
     "Speed Change Trap": ItemData(20050014, ItemClassification, 0)
-}
+}'''
 
 # Junk weights is just how often an item will be chosen when junk is being made
 # Bigger item = more likely to show up
@@ -166,7 +189,7 @@ junk_weights = {
 # This makes a really convenient list of all the other dictionaries
 # (fun fact: {} is a dictionary)
 item_table = {
-    **ap_skeleton_items,
+    **ap_memory_fragments,
     **ap_characters,
-    **junk_items
+    #**junk_items
 }

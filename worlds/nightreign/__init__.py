@@ -15,11 +15,10 @@ import logging
 from BaseClasses import MultiWorld, Item, Tutorial
 from worlds.AutoWorld import World, CollectionState, WebWorld
 from typing import Dict
-
+from .regions import create_regions
 from .locations import get_location_names, get_total_locations
 from .items import create_item, create_itempool, item_table
 from .options import APSkeletonOptions
-from .regions import create_regions
 from .types import ChapterType, chapter_type_to_name
 
 # This is where you setup the page on the site!
@@ -81,8 +80,6 @@ class APSkeletonWorld(World):
         # AP handles that one
         self.multiworld.push_precollected(self.create_item(starting_chapter))
 
-    # Regions are the different locations in your world. So like Undead Burgh in dark souls or Pacifilog Town in pokemon
-    # They dont have to match your game, they can be whatever you need them to be for organization
     def create_regions(self):
         # This function comes from your Regions.py and dont worry that it matches the function that its in
         create_regions(self)

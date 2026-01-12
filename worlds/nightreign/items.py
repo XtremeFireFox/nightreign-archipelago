@@ -38,7 +38,7 @@ def create_itempool(world: "APSkeletonWorld") -> List[Item]:
 
     # For this example I'll make it so there is a starting chapter
     # We loop through all the chapters in the my_chapter section
-    for chapter in ap_skeleton_chapters.keys():
+    for chapter in ap_characters.keys():
         # If the starting chapter equals the chapter we're looking at skip it
         # We skip it since we dont want to add the chapter the player started with to the item pool
         print("-------------------------")
@@ -116,26 +116,31 @@ def create_junk_items(world: "APSkeletonWorld", count: int) -> List[Item]:
 # These are just random numbers dont trust them PLEASE
 # I've seen some games that dynamically add item codes such as DOOM as well
 ap_skeleton_items = {
-    # Progression items
-    "A cute rat": ItemData(20050001, ItemClassification.progression),
-    "Estrogen": ItemData(20050002, ItemClassification.progression),
-    "Testosterone": ItemData(20050003, ItemClassification.progression),
-
-    # Useful items
-    "A good friend": ItemData(20050004, ItemClassification.useful),
-    "500 cigarettes": ItemData(20050005, ItemClassification.useful),
-    "Crime Baby": ItemData(20050006, ItemClassification.useful),
-
+    #Memory Fragments
+    "Memory Fragment - Wylder": ItemData(20050000, ItemClassification.progression, 9),
+    "Memory Fragment - Ironeye": ItemData(20050001, ItemClassification.progression, 8),
+    "Memory Fragment - Guardian": ItemData(20050002, ItemClassification.progression, 10),
+    "Memory Fragment - Duchess": ItemData(200500003, ItemClassification.progression, 9),
+    "Memory Fragment - Raider": ItemData(200500004, ItemClassification.progression, 8),
+    "Memory Fragment - Revenant": ItemData(200500005, ItemClassification.progression, 8),
+    "Memory Fragment - Recluse": ItemData(200500006, ItemClassification.progression, 8),
+    "Memory Fragment - Executor": ItemData(200500007, ItemClassification.progression, 7),
+    
     # Victory is added here since in this organization it needs to be in the default item pool
-    "Victory": ItemData(20050007, ItemClassification.progression)
+    #"Victory": ItemData(20050007, ItemClassification.progression)
 }
 
 # I like to split up the items so that its easier to look at and since sometimes you only need to look at one specific type of list
 # An example of that is in create_itempool where I simulated having a starting chapter
-ap_skeleton_chapters = {
-    "Green Hill Zone": ItemData(20050008, ItemClassification.progression),
-    "Romania": ItemData(20050009, ItemClassification.progression),
-    "The Sewer": ItemData(20050010, ItemClassification.progression)
+ap_characters = {
+    "Wylder": ItemData(20050008, ItemClassification.useful),
+    "Ironeye": ItemData(20050009, ItemClassification.useful),
+    "Guardian": ItemData(20050010, ItemClassification.useful),
+    "Duchess": ItemData(200500011, ItemClassification.useful),
+    "Raider": ItemData(200500012, ItemClassification.useful),
+    "Revenant": ItemData(200500013, ItemClassification.useful),
+    "Recluse": ItemData(200500014, ItemClassification.useful),
+    "Executor": ItemData(200500015, ItemClassification.useful),
 }
 
 # In the way that I made items, I added a way to specify how many of an item should exist
@@ -162,6 +167,6 @@ junk_weights = {
 # (fun fact: {} is a dictionary)
 item_table = {
     **ap_skeleton_items,
-    **ap_skeleton_chapters,
+    **ap_characters,
     **junk_items
 }

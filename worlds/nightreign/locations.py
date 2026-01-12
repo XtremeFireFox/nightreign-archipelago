@@ -59,15 +59,29 @@ ap_skeleton_locations = {
     # Regions will be explained more in Regions.py
     # But just know that it's mostly about organization
     # Place locations together based on where they are in the game and what is needed to get there
-    "A Fake Location Name": LocData(20050100, "Bucharest"),
-    "A really good restaurant": LocData(20050101, "Brașov"),
-    "Nuketown": LocData(20050103, "Green Hill Zone - Act 1"),
-    "Nuketown 2": LocData(20050104, "Green Hill Zone - Act 1"),
-    "Talk to Sonic": LocData(20050105, "Green Hill Zone - Act 2"),
-    "Talk to Captain Price": LocData(20050106, "Green Hill Zone - Act 3"),
-    "TMNT Hangout Spot": LocData(20050107, "The Sewer"),
-    "Above TMNT Hangout Spot": LocData(20050108, "The Sewer"),
-    "Coughing Baby Pickup": LocData(20050109, "The Sewer"),    
+
+    #Night 1 Bosses
+
+    "A Fake Location Name": LocData(20050100, "Night 1"),
+    "A really good restaurant": LocData(20050101, "Night 1"),
+    "Nuketown": LocData(20050103, "Night 1"),
+    "Nuketown 2": LocData(20050104, "Night 1"),
+    "Talk to Sonic": LocData(20050105, "Night 1"),
+    "Talk to Captain Price": LocData(20050106, "Night 1"),
+    "TMNT Hangout Spot": LocData(20050107, "Night 1"),
+    "Above TMNT Hangout Spot": LocData(20050108, "Night 1"),
+    "Coughing Baby Pickup": LocData(20050109, "Night 1"),
+
+    #Night 2 Bosses
+
+    
+
+    #Nightlords
+
+
+
+    #Small Jar Bazaar
+
 }
 
 extra_locations = {

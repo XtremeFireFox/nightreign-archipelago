@@ -7,6 +7,8 @@ from .types import LocData
 if TYPE_CHECKING:
     from . import APSkeletonWorld
 
+NRBASE = 4918940
+
 # This is technique in programming to make things more readable for booleans
 # A boolean is true or false
 def did_include_extra_locations(world: "APSkeletonWorld") -> bool:
@@ -62,101 +64,97 @@ ap_skeleton_locations = {
 
     #Evergaol Bosses
 
-    "A Fake Location Name": LocData(20050100),
-
     #Field Bosses
 
     #Location Bosses
 
     #Night 1 Bosses
 
-    "A Fake Location Name": LocData(20050100, "Night 1"),
-    "A really good restaurant": LocData(20050101, "Night 1"),
-    "Nuketown": LocData(20050103, "Night 1"),
-    "Nuketown 2": LocData(20050104, "Night 1"),
-    "Talk to Sonic": LocData(20050105, "Night 1"),
-    "Talk to Captain Price": LocData(20050106, "Night 1"),
-    "TMNT Hangout Spot": LocData(20050107, "Night 1"),
-    "Above TMNT Hangout Spot": LocData(20050108, "Night 1"),
-    "Coughing Baby Pickup": LocData(20050109, "Night 1"),
+    "A Fake Location Name": LocData(NRBASE + 1, "Night 1"),
+    "A really good restaurant": LocData(NRBASE + 2, "Night 1"),
+    "Nuketown": LocData(NRBASE + 3, "Night 1"),
+    "Nuketown 2": LocData(NRBASE + 4, "Night 1"),
+    "Talk to Sonic": LocData(NRBASE + 5, "Night 1"),
+    "Talk to Captain Price": LocData(NRBASE + 6, "Night 1"),
+    "TMNT Hangout Spot": LocData(NRBASE + 7, "Night 1"),
+    "Above TMNT Hangout Spot": LocData(NRBASE + 8, "Night 1"),
+    "Coughing Baby Pickup": LocData(NRBASE + 9, "Night 1"),
 
-    #Night 2 Bosses
+    # Night 2 Bosses
 
-    
 
-    #Nightlords
+    # Nightlords
 
-    "Gladius, Beast of Night": LocData(20050100, "Night 3"),
-    "Adel, Baron of Night": LocData(20050100, "Night 3"),
-    "Gnoster, Wisdom of Night": LocData(20050100, "Night 3"),
-    "Maris, Fathom of Night": LocData(20050100, "Night 3"),
-    "Libra, Creature of Night": LocData(20050100, "Night 3"),
-    "Fulghor, Champion of Nightglow": LocData(20050100, "Night 3"),
-    "Caligo, Miasma of Night": LocData(20050100, "Night 3"),
-    "Heolstor, the Nightlord": LocData(20050100, "Night 3"),
+    "Gladius, Beast of Night": LocData(NRBASE + 10, "Night 3"),
+    "Adel, Baron of Night": LocData(NRBASE + 11, "Night 3"),
+    "Gnoster, Wisdom of Night": LocData(NRBASE + 12, "Night 3"),
+    "Maris, Fathom of Night": LocData(NRBASE + 13, "Night 3"),
+    "Libra, Creature of Night": LocData(NRBASE + 14, "Night 3"),
+    "Fulghor, Champion of Nightglow": LocData(NRBASE + 15, "Night 3"),
+    "Caligo, Miasma of Night": LocData(NRBASE + 16, "Night 3"),
+    "Heolstor, the Nightlord": LocData(NRBASE + 17, "Night 3"),
 
-    #Shifting Earth Rewards (for later?)
+    # Shifting Earth Rewards (for later?)
 
-    
 
-    #Small Jar Bazaar
-    
-    "Wylder's Goblet": LocData(20050100, "Roundtable Hold"),
-    "Spirit Shelter Grail": LocData(20050100, "Roundtable Hold"),
-    "Sacred Erdtree Grail": LocData(20050100, "Roundtable Hold"),
-    "Revenant's Goblet": LocData(20050100, "Roundtable Hold"),
-    "Recluse's Goblet": LocData(20050100, "Roundtable Hold"),
-    "Raider's Goblet": LocData(20050100, "Roundtable Hold"),
-    "Ironeye's Goblet": LocData(20050100, "Roundtable Hold"),
-    "Guardian's Goblet": LocData(20050100, "Roundtable Hold"),
-    "Giant's Cradle Grail": LocData(20050100, "Roundtable Hold"),
-    "Executor's Goblet": LocData(20050100, "Roundtable Hold"),
-    "Duchess' Goblet": LocData(20050100, "Roundtable Hold"),
+    # Small Jar Bazaar
 
-    "Scenic Flatstone": LocData(20050100, "Roundtable Hold"),
-    "Polished Tranquil Scene": LocData(20050100, "Roundtable Hold"),
-    "Polished Luminous Scene": LocData(20050100, "Roundtable Hold"),
-    "Polished Drizzly Scene": LocData(20050100, "Roundtable Hold"),
-    "Polished Burning Scene": LocData(20050100, "Roundtable Hold"),
+    "Wylder's Goblet": LocData(NRBASE + 18, "Roundtable Hold"),
+    "Spirit Shelter Grail": LocData(NRBASE + 19, "Roundtable Hold"),
+    "Sacred Erdtree Grail": LocData(NRBASE + 20, "Roundtable Hold"),
+    "Revenant's Goblet": LocData(NRBASE + 21, "Roundtable Hold"),
+    "Recluse's Goblet": LocData(NRBASE + 22, "Roundtable Hold"),
+    "Raider's Goblet": LocData(NRBASE + 23, "Roundtable Hold"),
+    "Ironeye's Goblet": LocData(NRBASE + 24, "Roundtable Hold"),
+    "Guardian's Goblet": LocData(NRBASE + 25, "Roundtable Hold"),
+    "Giant's Cradle Grail": LocData(NRBASE + 26, "Roundtable Hold"),
+    "Executor's Goblet": LocData(NRBASE + 27, "Roundtable Hold"),
+    "Duchess' Goblet": LocData(NRBASE + 28, "Roundtable Hold"),
 
-    "Grand Tranquil Scene": LocData(20050100, "Roundtable Hold"),
-    "Grand Luminous Scene": LocData(20050100, "Roundtable Hold"),
-    "Grand Drizzly Scene": LocData(20050100, "Roundtable Hold"),
-    "Grand Burning Scene": LocData(20050100, "Roundtable Hold"),
+    "Scenic Flatstone": LocData(NRBASE + 29, "Roundtable Hold"),
+    "Polished Tranquil Scene": LocData(NRBASE + 30, "Roundtable Hold"),
+    "Polished Luminous Scene": LocData(NRBASE + 31, "Roundtable Hold"),
+    "Polished Drizzly Scene": LocData(NRBASE + 32, "Roundtable Hold"),
+    "Polished Burning Scene": LocData(NRBASE + 33, "Roundtable Hold"),
 
-    "Delicate Tranquil Scene": LocData(20050100, "Roundtable Hold"),
-    "Delicate Luminous Scene": LocData(20050100, "Roundtable Hold"),
-    "Delicate Drizzly Scene": LocData(20050100, "Roundtable Hold"),
-    "Delicate Burning Scene": LocData(20050100, "Roundtable Hold"),
+    "Grand Tranquil Scene": LocData(NRBASE + 34, "Roundtable Hold"),
+    "Grand Luminous Scene": LocData(NRBASE + 35, "Roundtable Hold"),
+    "Grand Drizzly Scene": LocData(NRBASE + 36, "Roundtable Hold"),
+    "Grand Burning Scene": LocData(NRBASE + 37, "Roundtable Hold"),
 
-    "Deep Scenic Flatstone": LocData(20050100, "Roundtable Hold"),
-    "Besmirched Frame": LocData(20050100, "Roundtable Hold"),
+    "Delicate Tranquil Scene": LocData(NRBASE + 38, "Roundtable Hold"),
+    "Delicate Luminous Scene": LocData(NRBASE + 39, "Roundtable Hold"),
+    "Delicate Drizzly Scene": LocData(NRBASE + 40, "Roundtable Hold"),
+    "Delicate Burning Scene": LocData(NRBASE + 41, "Roundtable Hold"),
 
-    "Prattling Pate \"You're beautiful\"": LocData(20050100, "Roundtable Hold"),
-    "Prattling Pate \"Wonderful\"": LocData(20050100, "Roundtable Hold"),
-    "Prattling Pate \"Thank You\"": LocData(20050100, "Roundtable Hold"),
-    "Prattling Pate \"Please Help\"": LocData(20050100, "Roundtable Hold"),
-    "Prattling Pate \"My beloved\"": LocData(20050100, "Roundtable Hold"),
-    "Prattling Pate \"Let's get to it\"": LocData(20050100, "Roundtable Hold"),
-    "Prattling Pate \"Hello\"": LocData(20050100, "Roundtable Hold"),
-    "Prattling Pate \"Apologies\"": LocData(20050100, "Roundtable Hold"),
+    "Deep Scenic Flatstone": LocData(NRBASE + 42, "Roundtable Hold"),
+    "Besmirched Frame": LocData(NRBASE + 43, "Roundtable Hold"),
 
-    "Gesture: What Do You Want?": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Warm Welcome": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Strength!": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Spread Out": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Sitting Sideways": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Reverential Bow": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Rest": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Rapture": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Prayer": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Polite Bow": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Patches' Crouch": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Outer Order": LocData(20050100, "Roundtable Hold"),
-    "Gesture: My Lord": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Inner Order": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Hoslow's Oath": LocData(20050100, "Roundtable Hold"),
-    "Gesture: Heartening Cry": LocData(20050100, "Roundtable Hold"),
+    "Prattling Pate \"You're beautiful\"": LocData(NRBASE + 44, "Roundtable Hold"),
+    "Prattling Pate \"Wonderful\"": LocData(NRBASE + 45, "Roundtable Hold"),
+    "Prattling Pate \"Thank You\"": LocData(NRBASE + 46, "Roundtable Hold"),
+    "Prattling Pate \"Please Help\"": LocData(NRBASE + 47, "Roundtable Hold"),
+    "Prattling Pate \"My beloved\"": LocData(NRBASE + 48, "Roundtable Hold"),
+    "Prattling Pate \"Let's get to it\"": LocData(NRBASE + 49, "Roundtable Hold"),
+    "Prattling Pate \"Hello\"": LocData(NRBASE + 50, "Roundtable Hold"),
+    "Prattling Pate \"Apologies\"": LocData(NRBASE + 51, "Roundtable Hold"),
+
+    "Gesture: What Do You Want?": LocData(NRBASE + 52, "Roundtable Hold"),
+    "Gesture: Warm Welcome": LocData(NRBASE + 53, "Roundtable Hold"),
+    "Gesture: Strength!": LocData(NRBASE + 54, "Roundtable Hold"),
+    "Gesture: Spread Out": LocData(NRBASE + 55, "Roundtable Hold"),
+    "Gesture: Sitting Sideways": LocData(NRBASE + 56, "Roundtable Hold"),
+    "Gesture: Reverential Bow": LocData(NRBASE + 57, "Roundtable Hold"),
+    "Gesture: Rest": LocData(NRBASE + 58, "Roundtable Hold"),
+    "Gesture: Rapture": LocData(NRBASE + 59, "Roundtable Hold"),
+    "Gesture: Prayer": LocData(NRBASE + 60, "Roundtable Hold"),
+    "Gesture: Polite Bow": LocData(NRBASE + 61, "Roundtable Hold"),
+    "Gesture: Patches' Crouch": LocData(NRBASE + 62, "Roundtable Hold"),
+    "Gesture: Outer Order": LocData(NRBASE + 63, "Roundtable Hold"),
+    "Gesture: My Lord": LocData(NRBASE + 64, "Roundtable Hold"),
+    "Gesture: Inner Order": LocData(NRBASE + 65, "Roundtable Hold"),
+    "Gesture: Hoslow's Oath": LocData(NRBASE + 66, "Roundtable Hold"),
+    "Gesture: Heartening Cry": LocData(NRBASE + 67, "Roundtable Hold"),
 
     #Collector Signboard
 

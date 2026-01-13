@@ -21,6 +21,8 @@ from typing import List, Dict, TYPE_CHECKING
 if TYPE_CHECKING:
     from . import APSkeletonWorld
 
+NRBASE = 4918940
+
 # If you're curious about the -> List[Item] that is a syntax to make sure you return the correct variable type
 # In this instance we're saying we only want to return a list of items
 # You'll see a bunch of other examples of this in other functions
@@ -116,55 +118,55 @@ def create_junk_items(world: "APSkeletonWorld", count: int) -> List[Item]:
 # These are just random numbers dont trust them PLEASE
 # I've seen some games that dynamically add item codes such as DOOM as well
 ap_memory_fragments = {
-    #Memory Fragments
-    "Memory Fragment - Wylder": ItemData(20050000, ItemClassification.progression, 9),
-    "Memory Fragment - Ironeye": ItemData(20050001, ItemClassification.progression, 8),
-    "Memory Fragment - Guardian": ItemData(20050002, ItemClassification.progression, 10),
-    "Memory Fragment - Duchess": ItemData(200500003, ItemClassification.progression, 9),
-    "Memory Fragment - Raider": ItemData(200500004, ItemClassification.progression, 8),
-    "Memory Fragment - Revenant": ItemData(200500005, ItemClassification.progression, 8),
-    "Memory Fragment - Recluse": ItemData(200500006, ItemClassification.progression, 8),
-    "Memory Fragment - Executor": ItemData(200500007, ItemClassification.progression, 7),
+    # Memory Fragments
+    "Memory Fragment - Wylder": ItemData(NRBASE + 1, ItemClassification.progression, 9),
+    "Memory Fragment - Ironeye": ItemData(NRBASE + 2, ItemClassification.progression, 8),
+    "Memory Fragment - Guardian": ItemData(NRBASE + 3, ItemClassification.progression, 10),
+    "Memory Fragment - Duchess": ItemData(NRBASE + 4, ItemClassification.progression, 9),
+    "Memory Fragment - Raider": ItemData(NRBASE + 5, ItemClassification.progression, 8),
+    "Memory Fragment - Revenant": ItemData(NRBASE + 6, ItemClassification.progression, 8),
+    "Memory Fragment - Recluse": ItemData(NRBASE + 7, ItemClassification.progression, 8),
+    "Memory Fragment - Executor": ItemData(NRBASE + 8, ItemClassification.progression, 7),
     
     # Victory is added here since in this organization it needs to be in the default item pool
-    #"Victory": ItemData(20050007, ItemClassification.progression)
+    # "Victory": ItemData(NRBASE + 9, ItemClassification.progression)
 }
 
 ap_shifting_earths = {
-    "Crater Unlock": ItemData(20050008, ItemClassification.progression),
-    "Mountaintop Unlock": ItemData(20050000, ItemClassification.progression),
-    "Rotted Woods Unlock": ItemData(20050000, ItemClassification.progression),
-    "Noklateo, the Shrouded City Unlock": ItemData(20050000, ItemClassification.progression),
+    "Crater Unlock": ItemData(NRBASE + 9, ItemClassification.progression),
+    "Mountaintop Unlock": ItemData(NRBASE + 10, ItemClassification.progression),
+    "Rotted Woods Unlock": ItemData(NRBASE + 11, ItemClassification.progression),
+    "Noklateo, the Shrouded City Unlock": ItemData(NRBASE + 12, ItemClassification.progression),
 }
 
 ap_nights = {
-    "Night 2 Unlock": ItemData(20050000, ItemClassification.progression),
-    "Night 3 Unlock": ItemData(20050000, ItemClassification.progression),
+    "Night 2 Unlock": ItemData(NRBASE + 13, ItemClassification.progression),
+    "Night 3 Unlock": ItemData(NRBASE + 14, ItemClassification.progression),
 }
 
 ap_nightlords = {
-    "Gladius, Beast of Night": ItemData(20050008, ItemClassification.progression),
-    "Adel, Baron of Night": ItemData(20050000, ItemClassification.progression),
-    "Gnoster, Wisdom of Night": ItemData(20050000, ItemClassification.progression),
-    "Maris, Fathom of Night": ItemData(20050000, ItemClassification.progression),
-    "Libra, Creature of Night": ItemData(20050000, ItemClassification.progression),
-    "Fulghor, Champion of Nightglow": ItemData(20050000, ItemClassification.progression),
-    "Caligo, Miasma of Night": ItemData(20050000, ItemClassification.progression),
-    "Heolstor, the Nightlord": ItemData(20050000, ItemClassification.progression),
+    "Gladius, Beast of Night": ItemData(NRBASE + 15, ItemClassification.progression),
+    "Adel, Baron of Night": ItemData(NRBASE + 16, ItemClassification.progression),
+    "Gnoster, Wisdom of Night": ItemData(NRBASE + 17, ItemClassification.progression),
+    "Maris, Fathom of Night": ItemData(NRBASE + 18, ItemClassification.progression),
+    "Libra, Creature of Night": ItemData(NRBASE + 19, ItemClassification.progression),
+    "Fulghor, Champion of Nightglow": ItemData(NRBASE + 20, ItemClassification.progression),
+    "Caligo, Miasma of Night": ItemData(NRBASE + 21, ItemClassification.progression),
+    "Heolstor, the Nightlord": ItemData(NRBASE + 22, ItemClassification.progression),
 }
 
-# I like to split up the items so that its easier to look at and since sometimes you only need to look at one specific type of list
-# An example of that is in create_itempool where I simulated having a starting chapter
+# Characters
 ap_characters = {
-    "Wylder": ItemData(20050008, ItemClassification.useful),
-    "Ironeye": ItemData(20050009, ItemClassification.useful),
-    "Guardian": ItemData(20050010, ItemClassification.useful),
-    "Duchess": ItemData(200500011, ItemClassification.useful),
-    "Raider": ItemData(200500012, ItemClassification.useful),
-    "Revenant": ItemData(200500013, ItemClassification.useful),
-    "Recluse": ItemData(200500014, ItemClassification.useful),
-    "Executor": ItemData(200500015, ItemClassification.useful),
+    "Wylder": ItemData(NRBASE + 23, ItemClassification.useful),
+    "Ironeye": ItemData(NRBASE + 24, ItemClassification.useful),
+    "Guardian": ItemData(NRBASE + 25, ItemClassification.useful),
+    "Duchess": ItemData(NRBASE + 26, ItemClassification.useful),
+    "Raider": ItemData(NRBASE + 27, ItemClassification.useful),
+    "Revenant": ItemData(NRBASE + 28, ItemClassification.useful),
+    "Recluse": ItemData(NRBASE + 29, ItemClassification.useful),
+    "Executor": ItemData(NRBASE + 30, ItemClassification.useful),
 }
+
 
 # In the way that I made items, I added a way to specify how many of an item should exist
 # That's why junk has a 0 since how many are created is in the create_junk_items

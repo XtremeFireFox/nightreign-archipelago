@@ -96,9 +96,9 @@ def create_junk_items(world: "APSkeletonWorld", count: int) -> List[Item]:
         # This is for traps if your randomization includes it
         # It also grabs the trap weights from the options page
         elif trap_chance > 0 and ic == ItemClassification.trap:
-            if name == "Forcefem Trap":
+            if name == "Invasion":
                 trap_list[name] = world.options.ForcefemTrapWeight.value
-            elif name == "Speed Change Trap":
+            elif name == "Spawn enemies":
                 trap_list[name] = world.options.SpeedChangeTrapWeight.value
 
     # Where all the magic happens of adding the junk and traps randomly
@@ -168,10 +168,110 @@ ap_characters = {
     "Executor": ItemData(NRBASE + 31, ItemClassification.useful),
 }
 
+ap_bazaar = {
+    "Wylder's Goblet": ItemData(NRBASE + 32, ItemClassification.useful),
+    "Spirit Shelter Grail": ItemData(NRBASE + 33, ItemClassification.useful),
+    "Sacred Erdtree Grail": ItemData(NRBASE + 34, ItemClassification.deprioritized),
+    "Revenant's Goblet": ItemData(NRBASE + 35, ItemClassification.deprioritized),
+    "Recluse's Goblet": ItemData(NRBASE + 36, ItemClassification.deprioritized),
+    "Raider's Goblet": ItemData(NRBASE + 37, ItemClassification.deprioritized),
+    "Ironeye's Goblet": ItemData(NRBASE + 38, ItemClassification.deprioritized),
+    "Guardian's Goblet": ItemData(NRBASE + 39, ItemClassification.deprioritized),
+    "Giant's Cradle Grail": ItemData(NRBASE + 40, ItemClassification.deprioritized),
+    "Executor's Goblet": ItemData(NRBASE + 41, ItemClassification.deprioritized),
+    "Duchess' Goblet": ItemData(NRBASE + 42, ItemClassification.deprioritized),
+
+    "Scenic Flatstone": ItemData(NRBASE + 43, ItemClassification.deprioritized),
+    "Polished Tranquil Scene": ItemData(NRBASE + 44, ItemClassification.deprioritized),
+    "Polished Luminous Scene": ItemData(NRBASE + 45, ItemClassification.deprioritized),
+    "Polished Drizzly Scene": ItemData(NRBASE + 46, ItemClassification.deprioritized),
+    "Polished Burning Scene": ItemData(NRBASE + 47, ItemClassification.deprioritized),
+
+    "Grand Tranquil Scene": ItemData(NRBASE + 48, ItemClassification.deprioritized),
+    "Grand Luminous Scene": ItemData(NRBASE + 49, ItemClassification.deprioritized),
+    "Grand Drizzly Scene": ItemData(NRBASE + 50, ItemClassification.deprioritized),
+    "Grand Burning Scene": ItemData(NRBASE + 51, ItemClassification.deprioritized),
+
+    "Delicate Tranquil Scene": ItemData(NRBASE + 52, ItemClassification.deprioritized),
+    "Delicate Luminous Scene": ItemData(NRBASE + 53, ItemClassification.deprioritized),
+    "Delicate Drizzly Scene": ItemData(NRBASE + 54, ItemClassification.deprioritized),
+    "Delicate Burning Scene": ItemData(NRBASE + 55, ItemClassification.deprioritized),
+
+    "Deep Scenic Flatstone": ItemData(NRBASE + 56, ItemClassification.deprioritized),
+    "Besmirched Frame": ItemData(NRBASE + 57, ItemClassification.deprioritized),
+
+    "Prattling Pate \"You're beautiful\"": ItemData(NRBASE + 58, ItemClassification.deprioritized),
+    "Prattling Pate \"Wonderful\"": ItemData(NRBASE + 59, ItemClassification.deprioritized),
+    "Prattling Pate \"Thank You\"": ItemData(NRBASE + 60, ItemClassification.deprioritized),
+    "Prattling Pate \"Please Help\"": ItemData(NRBASE + 61, ItemClassification.deprioritized),
+    "Prattling Pate \"My beloved\"": ItemData(NRBASE + 62, ItemClassification.deprioritized),
+    "Prattling Pate \"Let's get to it\"": ItemData(NRBASE + 63, ItemClassification.deprioritized),
+    "Prattling Pate \"Hello\"": ItemData(NRBASE + 64, ItemClassification.deprioritized),
+    "Prattling Pate \"Apologies\"": ItemData(NRBASE + 65, ItemClassification.deprioritized),
+
+    "Gesture: What Do You Want?": ItemData(NRBASE + 66, ItemClassification.deprioritized),
+    "Gesture: Warm Welcome": ItemData(NRBASE + 67, ItemClassification.deprioritized),
+    "Gesture: Strength!": ItemData(NRBASE + 68, ItemClassification.deprioritized),
+    "Gesture: Spread Out": ItemData(NRBASE + 69, ItemClassification.deprioritized),
+    "Gesture: Sitting Sideways": ItemData(NRBASE + 70, ItemClassification.deprioritized),
+    "Gesture: Reverential Bow": ItemData(NRBASE + 71, ItemClassification.deprioritized),
+    "Gesture: Rest": ItemData(NRBASE + 72, ItemClassification.deprioritized),
+    "Gesture: Rapture": ItemData(NRBASE + 73, ItemClassification.deprioritized),
+    "Gesture: Prayer": ItemData(NRBASE + 74, ItemClassification.deprioritized),
+    "Gesture: Polite Bow": ItemData(NRBASE + 75, ItemClassification.deprioritized),
+    "Gesture: Patches' Crouch": ItemData(NRBASE + 76, ItemClassification.deprioritized),
+    "Gesture: Outer Order": ItemData(NRBASE + 77, ItemClassification.deprioritized),
+    "Gesture: My Lord": ItemData(NRBASE + 78, ItemClassification.deprioritized),
+    "Gesture: Inner Order": ItemData(NRBASE + 79, ItemClassification.deprioritized),
+    "Gesture: Hoslow's Oath": ItemData(NRBASE + 80, ItemClassification.deprioritized),
+    "Gesture: Heartening Cry": ItemData(NRBASE + 81, ItemClassification.deprioritized),
+}
+
+ap_relics = {
+    "Fell Omen Fetish": ItemData(NRBASE + 82, ItemClassification.deprioritized),
+    "Old Pocketwatch": ItemData(NRBASE + 83, ItemClassification.deprioritized),
+    "Besmirched Frame": ItemData(NRBASE + 84, ItemClassification.deprioritized),
+    "Slate Whetstone": ItemData(NRBASE + 85, ItemClassification.deprioritized),
+    "Silver Tear": ItemData(NRBASE + 86, ItemClassification.deprioritized),
+    "The Wylder's Earring": ItemData(NRBASE + 87, ItemClassification.deprioritized),
+    "Stone Stake": ItemData(NRBASE + 88, ItemClassification.deprioritized),
+    "Third Volume": ItemData(NRBASE + 89, ItemClassification.deprioritized),
+    "Cracked Witch's Brooch": ItemData(NRBASE + 90, ItemClassification.deprioritized),
+    "Witch's Brooch": ItemData(NRBASE + 91, ItemClassification.deprioritized),
+    "Cracked Sealing Wax": ItemData(NRBASE + 92, ItemClassification.deprioritized),
+    "Edge of Order": ItemData(NRBASE + 93, ItemClassification.deprioritized),
+    "Golden Dew": ItemData(NRBASE + 94, ItemClassification.deprioritized),
+    "Crown Medal": ItemData(NRBASE + 95, ItemClassification.deprioritized),
+    "Blessed Iron Coin": ItemData(NRBASE + 96, ItemClassification.deprioritized),
+    "Torn Braided Cord": ItemData(NRBASE + 97, ItemClassification.deprioritized),
+    "Black Claw Necklace": ItemData(NRBASE + 98, ItemClassification.deprioritized),
+    "Small Makeup Brush": ItemData(NRBASE + 99, ItemClassification.deprioritized),
+    "Old Portrait": ItemData(NRBASE + 100, ItemClassification.deprioritized),
+    "Vestige of Night": ItemData(NRBASE + 101, ItemClassification.deprioritized),
+    "Bone-Like Stone": ItemData(NRBASE + 102, ItemClassification.deprioritized),
+    "Blessed Flowers": ItemData(NRBASE + 103, ItemClassification.deprioritized),
+    "Golden Sprout": ItemData(NRBASE + 104, ItemClassification.deprioritized),
+    "Night of the Beast": ItemData(NRBASE + 105, ItemClassification.deprioritized),
+    "Night of the Baron": ItemData(NRBASE + 106, ItemClassification.deprioritized),
+    "Night of the Wise": ItemData(NRBASE + 107, ItemClassification.deprioritized),
+    "Night of the Fathom": ItemData(NRBASE + 108, ItemClassification.deprioritized),
+    "Night of the Demon": ItemData(NRBASE + 109, ItemClassification.deprioritized),
+    "Night of the Champion": ItemData(NRBASE + 110, ItemClassification.deprioritized),
+    "Night of the Miasma": ItemData(NRBASE + 111, ItemClassification.deprioritized),
+    "Night of the Lord": ItemData(NRBASE + 112, ItemClassification.deprioritized),
+    "Dark Night of the Baron": ItemData(NRBASE + 113, ItemClassification.deprioritized),
+    "Dark Night of the Champion": ItemData(NRBASE + 114, ItemClassification.deprioritized),
+    "Dark Night of the Wise": ItemData(NRBASE + 115, ItemClassification.deprioritized),
+    "Dark Night of the Fathom": ItemData(NRBASE + 116, ItemClassification.deprioritized),
+    "Dark Night of the Miasma": ItemData(NRBASE + 117, ItemClassification.deprioritized),
+    "Dark Night of the Demon": ItemData(NRBASE + 118, ItemClassification.deprioritized),
+    "Dark Night of the Beast": ItemData(NRBASE + 119, ItemClassification.deprioritized),
+}
+
 #Victory!
 
 ap_victory = {
-    "Victory": ItemData(NRBASE + 32, ItemClassification.progression),
+    "Victory": ItemData(NRBASE + 120, ItemClassification.progression),
 }
 
 
@@ -180,12 +280,12 @@ ap_victory = {
 # There is a better way of doing this but this is my jank
 junk_items = {
     # Junk
-    "Murk": ItemData(NRBASE + 33, ItemClassification.filler, 0),
-    "Sovreign Sigil": ItemData(NRBASE + 34, ItemClassification.filler, 0),
+    "Murk": ItemData(NRBASE + 121, ItemClassification.filler, 0),
+    "Sovreign Sigil": ItemData(NRBASE + 122, ItemClassification.filler, 0),
 
     # Traps
-    "Invasion": ItemData(NRBASE + 35, ItemClassification.trap, 0),
-    "Spawn enemies": ItemData(NRBASE + 36, ItemClassification.trap, 0)
+    "Invasion": ItemData(NRBASE + 123, ItemClassification.trap, 0),
+    "Spawn enemies": ItemData(NRBASE + 124, ItemClassification.trap, 0)
 }
 
 # Junk weights is just how often an item will be chosen when junk is being made
@@ -204,5 +304,7 @@ item_table = {
     **ap_nightlords,
     **ap_shifting_earths,
     **ap_victory,
-    **junk_items
+    **junk_items,
+    **ap_relics,
+    **ap_bazaar
 }

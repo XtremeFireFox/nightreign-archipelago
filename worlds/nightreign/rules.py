@@ -16,15 +16,12 @@ def set_rules(world: "APSkeletonWorld"):
     options = world.options
 
     # Chapter Access
-    add_rule(world.multiworld.get_entrance("Menu -> Green Hill Zone", player),
-             lambda state: state.has("Green Hill Zone", player))
-    add_rule(world.multiworld.get_entrance("Menu -> Romania", player),
-             lambda state: state.has("Romania", player))
-    add_rule(world.multiworld.get_entrance("Menu -> The Sewer", player),
-             lambda state: state.has("The Sewer", player))
-    
-    add_rule(world.multiworld.get_entrance("The Sewer -> Big Hole in the Floor", player),
-             lambda state: state.has("A cute rat") and state.has("Estrogen") and state.has("Testosterone"))
+    #add_rule(world.multiworld.get_entrance("Roundtable Hold -> Night 1", player),
+             #lambda state: state.has("Night 1", player))
+    add_rule(world.multiworld.get_entrance("Night 1 -> Night 2", player),
+             lambda state: state.has("Night 2", player))
+    add_rule(world.multiworld.get_entrance("Night 2 -> Night 3", player),
+             lambda state: state.has("Night 3", player))
     
     # Victory condition rule!
     world.multiworld.completion_condition[player] = lambda state: state.has("Victory", player)

@@ -11,8 +11,7 @@ NRBASE = 4918940
 
 # This is technique in programming to make things more readable for booleans
 # A boolean is true or false
-def did_include_extra_locations(world: "APSkeletonWorld") -> bool:
-    return bool(world.options.ExtraLocations)
+
 
 # This is used by ap and in Items.py
 # Theres a multitude of reasons to need to grab how many locations there are
@@ -23,12 +22,9 @@ def get_total_locations(world: "APSkeletonWorld") -> int:
         # If we did not turn on extra locations (see how readable it is with that thing from the top)
         # AND the name of it is found in our extra locations table, then that means we dont want to count it
         # So continue moves onto the next name in the table
-        if not did_include_extra_locations(world) and name in extra_locations:
-            continue
 
         # If the location is valid though, count it
-        if is_valid_location(world, name):
-            total += 1
+        total += 1
 
     return total
 
@@ -42,11 +38,6 @@ def get_location_names() -> Dict[str, int]:
 # The check to make sure the location is valid
 # I know it looks like the same as when we counted it but thats because this is an example
 # Things get complicated fast so having a back up is nice
-def is_valid_location(world: "APSkeletonWorld", name) -> bool:
-    if not did_include_extra_locations(world) and name in extra_locations:
-        return False
-    
-    return True
 
 # You might need more functions as well so be liberal with them
 # My advice, if you are about to type the same thing in a second time, turn it into a function
@@ -160,21 +151,10 @@ ap_skeleton_locations = {
 
 }
 
-extra_locations = {
-  
-}
-
-# Like in Items.py, breaking up the different locations to help with organization and if something special needs to happen to them
-event_locations = {
-
-}
-
 # Also like in Items.py, this collects all the dictionaries together
 # Its important to note that locations MUST be bigger than progressive item count and should be bigger than total item count
 # Its not here because this is an example and im not funny enough to think of more locations
 # But important to note
 location_table = {
-    **ap_skeleton_locations,
-    **extra_locations,
-    **event_locations
+    **ap_skeleton_locations
 }

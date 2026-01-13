@@ -1,4 +1,4 @@
-# Elden Ring: Nightreign
+# Elden Ring Nightreign
 
 ## Where is the options page?
 

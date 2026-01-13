@@ -1,6 +1,6 @@
 from BaseClasses import Region
 from .types import APSkeletonLocation
-from .locations import location_table, is_valid_location
+from .locations import location_table
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
@@ -14,11 +14,11 @@ def create_regions(world: "APSkeletonWorld"):
     # The functions that are being used here will be located at the bottom to view
     # The important part is that if its not a dead end and connects to another place then name it
     # Otherwise you can just create the connection. Not that naming it is bad
-
+    menu = create_region(world, "Menu")
     # You can technically name your connections whatever you want as well
     # You'll use those connection names in Rules.py
-    roundtable_hold = create_region(world, "Roundtable Hold")
-    night_1 = create_region_and_connect(world, "Night 1", "Menu -> Night 1", roundtable_hold)
+    roundtable_hold = create_region_and_connect(world, "Roundtable Hold", "Menu -> Roundtable Hold", menu)
+    night_1 = create_region_and_connect(world, "Night 1", "Roundtable Hold -> Night 1", roundtable_hold)
     night_2 = create_region_and_connect(world, "Night 2", "Night 1 -> Night 2", night_1)
     night_3 = create_region_and_connect(world, "Night 3", "Night 2 -> Night 3", night_2)
 
@@ -29,11 +29,8 @@ def create_region(world: "APSkeletonWorld", name: str) -> Region:
     # If they are and are valid, we attach it to the region
     for (key, data) in location_table.items():
         if data.region == name:
-            if not is_valid_location(world, key):
-                continue
             location = APSkeletonLocation(world.player, key, data.ap_code, reg)
             reg.locations.append(location)
-    
     world.multiworld.regions.append(reg)
     return reg
 

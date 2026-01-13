@@ -20,16 +20,10 @@ class StartingChapter(Choice):
     When displaying the options names on the site, _ will become spaces and the word option will go away.
     """
     display_name = "Starting Chapter"
-    option_green_hill_zone = 1
-    option_romania = 2
-    option_the_sewer = 3
+    option_night_1 = 1
+    option_night_2 = 2
+    option_night_3 = 3
     default = 1
-
-class ExtraLocations(Toggle):
-    """
-    This will enable the extra locations option. Toggle is just true or false.
-    """
-    display_name = "Add Extra Locations"
 
 class TrapChance(Range):
     """
@@ -42,37 +36,13 @@ class TrapChance(Range):
     range_end = 100
     default = 0
 
-class ForcefemTrapWeight(Range):
-    """
-    The weight of forcefem traps in the trap pool.
-    Does really cool stuff to your body.
-    """
-    display_name = "Forcefem Trap Weight"
-    range_start = 0
-    range_end = 100
-    default = 100
-
-class SpeedChangeTrapWeight(Range):
-    """
-    The weight of speed change traps in the trap pool.
-    Speed change traps change the game speed for x seconds.
-    """
-    display_name = "Speed Change Trap Weight"
-    range_start = 0
-    range_end = 100
-    default = 25
-
 @dataclass
 class APSkeletonOptions(PerGameCommonOptions):
-    StartingChapter:            StartingChapter
-    ExtraLocations:             ExtraLocations
     TrapChance:                 TrapChance
-    ForcefemTrapWeight:         ForcefemTrapWeight
-    SpeedChangeTrapWeight:      SpeedChangeTrapWeight
+    StartingChapter:            StartingChapter
 
 # This is where you organize your options
 # Its entirely up to you how you want to organize it
 ap_skeleton_option_groups: Dict[str, List[Any]] = {
-    "General Options": [StartingChapter, ExtraLocations],
-    "Trap Options": [TrapChance, ForcefemTrapWeight, SpeedChangeTrapWeight]
+    "Trap Options": [TrapChance]
 }

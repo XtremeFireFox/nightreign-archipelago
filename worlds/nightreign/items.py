@@ -55,7 +55,7 @@ def create_itempool(world: "APSkeletonWorld") -> List[Item]:
     # It's up to you and how you want things organized but I like to deal with victory here
     # This creates your win item and then places it at the "location" where you win
     victory = create_item(world, "Victory")
-    world.multiworld.get_location("Beat Final Boss", world.player).place_locked_item(victory)
+    world.multiworld.get_location("Heolstor, the Nightlord", world.player).place_locked_item(victory)
 
     # Then junk items are made
     # Check out the create_junk_items function for more details
@@ -140,52 +140,59 @@ ap_shifting_earths = {
 }
 
 ap_nights = {
-    "Night 2 Unlock": ItemData(NRBASE + 13, ItemClassification.progression),
-    "Night 3 Unlock": ItemData(NRBASE + 14, ItemClassification.progression),
+    "Night 1": ItemData(NRBASE + 13, ItemClassification.progression),
+    "Night 2": ItemData(NRBASE + 14, ItemClassification.progression),
+    "Night 3": ItemData(NRBASE + 15, ItemClassification.progression),
 }
 
 ap_nightlords = {
-    "Gladius, Beast of Night": ItemData(NRBASE + 15, ItemClassification.progression),
-    "Adel, Baron of Night": ItemData(NRBASE + 16, ItemClassification.progression),
-    "Gnoster, Wisdom of Night": ItemData(NRBASE + 17, ItemClassification.progression),
-    "Maris, Fathom of Night": ItemData(NRBASE + 18, ItemClassification.progression),
-    "Libra, Creature of Night": ItemData(NRBASE + 19, ItemClassification.progression),
-    "Fulghor, Champion of Nightglow": ItemData(NRBASE + 20, ItemClassification.progression),
-    "Caligo, Miasma of Night": ItemData(NRBASE + 21, ItemClassification.progression),
-    "Heolstor, the Nightlord": ItemData(NRBASE + 22, ItemClassification.progression),
+    "Gladius, Beast of Night": ItemData(NRBASE + 16, ItemClassification.progression),
+    "Adel, Baron of Night": ItemData(NRBASE + 17, ItemClassification.progression),
+    "Gnoster, Wisdom of Night": ItemData(NRBASE + 18, ItemClassification.progression),
+    "Maris, Fathom of Night": ItemData(NRBASE + 19, ItemClassification.progression),
+    "Libra, Creature of Night": ItemData(NRBASE + 20, ItemClassification.progression),
+    "Fulghor, Champion of Nightglow": ItemData(NRBASE + 21, ItemClassification.progression),
+    "Caligo, Miasma of Night": ItemData(NRBASE + 22, ItemClassification.progression),
+    "Heolstor, the Nightlord": ItemData(NRBASE + 23, ItemClassification.progression),
 }
 
 # Characters
 ap_characters = {
-    "Wylder": ItemData(NRBASE + 23, ItemClassification.useful),
-    "Ironeye": ItemData(NRBASE + 24, ItemClassification.useful),
-    "Guardian": ItemData(NRBASE + 25, ItemClassification.useful),
-    "Duchess": ItemData(NRBASE + 26, ItemClassification.useful),
-    "Raider": ItemData(NRBASE + 27, ItemClassification.useful),
-    "Revenant": ItemData(NRBASE + 28, ItemClassification.useful),
-    "Recluse": ItemData(NRBASE + 29, ItemClassification.useful),
-    "Executor": ItemData(NRBASE + 30, ItemClassification.useful),
+    "Wylder": ItemData(NRBASE + 24, ItemClassification.useful),
+    "Ironeye": ItemData(NRBASE + 25, ItemClassification.useful),
+    "Guardian": ItemData(NRBASE + 26, ItemClassification.useful),
+    "Duchess": ItemData(NRBASE + 27, ItemClassification.useful),
+    "Raider": ItemData(NRBASE + 28, ItemClassification.useful),
+    "Revenant": ItemData(NRBASE + 29, ItemClassification.useful),
+    "Recluse": ItemData(NRBASE + 30, ItemClassification.useful),
+    "Executor": ItemData(NRBASE + 31, ItemClassification.useful),
+}
+
+#Victory!
+
+ap_victory = {
+    "Victory": ItemData(NRBASE + 32, ItemClassification.progression),
 }
 
 
 # In the way that I made items, I added a way to specify how many of an item should exist
 # That's why junk has a 0 since how many are created is in the create_junk_items
 # There is a better way of doing this but this is my jank
-'''junk_items = {
+junk_items = {
     # Junk
-    "An Old Gamecube": ItemData(20050011, ItemClassification.filler, 0),
-    "Coughing Baby": ItemData(20050012, ItemClassification.filler, 0),
+    "Murk": ItemData(NRBASE + 33, ItemClassification.filler, 0),
+    "Sovreign Sigil": ItemData(NRBASE + 34, ItemClassification.filler, 0),
 
     # Traps
-    "Forcefem Trap": ItemData(20050013, ItemClassification.trap, 0),
-    "Speed Change Trap": ItemData(20050014, ItemClassification, 0)
-}'''
+    "Invasion": ItemData(NRBASE + 35, ItemClassification.trap, 0),
+    "Spawn enemies": ItemData(NRBASE + 36, ItemClassification.trap, 0)
+}
 
 # Junk weights is just how often an item will be chosen when junk is being made
 # Bigger item = more likely to show up
 junk_weights = {
-    "An Old Gamecube": 40,
-    "Coughing Baby": 20
+    "Murk": 40,
+    "Sovreign Sigil": 20
 }
 
 # This makes a really convenient list of all the other dictionaries
@@ -193,5 +200,9 @@ junk_weights = {
 item_table = {
     **ap_memory_fragments,
     **ap_characters,
-    #**junk_items
+    **ap_nights,
+    **ap_nightlords,
+    **ap_shifting_earths,
+    **ap_victory,
+    **junk_items
 }

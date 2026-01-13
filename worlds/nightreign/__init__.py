@@ -106,10 +106,7 @@ class APSkeletonWorld(World):
         slot_data: Dict[str, object] = {
             "options": {
                 "StartingPlace":            self.options.StartingChapter.value,
-                "ExtraLocations":           self.options.ExtraLocations.value,
                 "TrapChance":               self.options.TrapChance.value,
-                "ForcefemTrapWeight":       self.options.ForcefemTrapWeight.value,
-                "SpeedChangeTrapWeight":    self.options.SpeedChangeTrapWeight.value
             },
             "Seed": self.multiworld.seed_name,  # to verify the server's multiworld
             "Slot": self.multiworld.player_name[self.player],  # to connect to server

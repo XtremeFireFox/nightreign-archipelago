@@ -17,14 +17,14 @@ class APSkeletonItem(Item):
 # Mainly used in Items.py for starting chapter
 # Not important for a lot of games
 class ChapterType(IntEnum):
-    GreenHillZone = 1
-    Romania = 2
-    Sewer = 3
+    Night1 = 1
+    Night2 = 2
+    Night3 = 3
 
 chapter_type_to_name = {
-    ChapterType.GreenHillZone:  "Green Hill Zone",
-    ChapterType.Romania:        "Romania",
-    ChapterType.Sewer:          "The Sewer"
+    ChapterType.Night1:  "Night 1",
+    ChapterType.Night2:  "Night 2",
+    ChapterType.Night3:  "Night 3"
 }
 
 # Here is where all the stuff from the Items.py comes from
